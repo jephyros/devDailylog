@@ -1,13 +1,16 @@
 해야될일
-*내정보수정
-* 로그인실패시 로그인화면으로 전환( 페이지내에 실패 이유표기)
-* Result 클래스 별도로 빼서 권한체크스 에러메세지 반환하도록
-*Repository 인터페이스만가지고 해보자 구현체없어도 마이바티스 인식할듯
-* 로그인처리 , 화면 메뉴권한 체크 
-*마이바티스의 퀄리 xml 을 xml로 하지말고해보자
 
-* 업데이트시 mybatis <set> 구문사용하여 동적쿼리구성
- * 인텔리제이에서 NEW 로 파일 중ㅇ 특정 템플릿불러오는방법을 모르겠음
+ * 로그인 화면의 remember me 쿠키처리
+ * Repository 인터페이스만가지고 해보자 구현체없어도 마이바티스 인식하는데 트랜젝션도 체크해보다
+  
+ *내정보수정화면구성
+ * Result 클래스 별도로 빼서 권한체크스 에러메세지 반환하도록
+ 
+
+ * 마이바티스의 퀄리 xml 을 xml로 하지말고해보자
+
+ * 업데이트시 mybatis <set> 구문사용하여 동적쿼리구성
+ * 인텔리제이에서 NEW 로 파일 중 특정 템플릿불러오는방법을 모르겠음 (java interface 템플릿을 못불러옴 )
  * 마이바티스 설정을 xml 말고 어노테이션으로 , dbcp 사용으로 변경3
   
   
@@ -15,7 +18,11 @@
   
 
 해결한일
-  *빠른 생산성을 위해서 재기동 없이 톰캣 Hot swapping 을 스프링부트처럼 할수있게
+ * Repository 인터페이스만가지고 해보자 구현체없어도 마이바티스 인식하는지 체크 
+   :  최종 Repository (DAO)에서는 인터페이스만구현하고 Service단에서 SqlSession 을 호출하여 처리
+ * 로그인실패시 로그인화면으로 전환( 페이지내에 실패 이유표기)
+ * 로그인처리 , 화면 메뉴권한 처리완료
+ * 빠른 생산성을 위해서 재기동 없이 톰캣 Hot swapping 을 스프링부트처럼 할수있게
     스프링로더 jar 파일을 아래링크에서다운(최신버전은알아서판단 )
        http://mvnrepository.com/artifact/org.springframework/springloaded/1.2.4.RELEASE
     인텔리제이의경우 톰캣설정에서 vm 옵션 에 
@@ -23,7 +30,7 @@
       On Update action 과 On frame deactivation 을 -> update classes and resources 로 바꾸어준다.
   
 
-  * 부트스트랩적용 하고 /상대경로 맞추어서 header,menu,footer 분리하기
+ * 부트스트랩적용 하고 /상대경로 맞추어서 header,menu,footer 분리하기
       <link rel="stylesheet" href="<c:url value="/resources/bootstrap-3.3.2/css/bootstrap.min.css" />" >
       위와같이 jstl 사용하여 절대경로의 css 위치를 잡았다.
   * mysql 연결 mybatis

@@ -1,0 +1,169 @@
+릴리스 정보
+ SQL Server용 Microsoft JDBC 드라이버 6.0
+ 2016년 5월
+
+------------
+소개
+------------
+이 파일에는 SQL Server용 Microsoft JDBC Driver 6.0 설명서를 보완하는 최신 정보 및 기타 중요 정보가
+ 들어 있습니다. JDBC 드라이버를 설치하기 전에 이 파일을
+ 읽어야 합니다.
+
+Microsoft에서는 사용자의 의견을 매우 소중하게 여기며 이러한 의견을 반영하기 위해
+ 노력하고 있습니다. JDBC 드라이버 블로그 및 온라인 포럼을 사용하여 의견을 제출하는 방법은
+ http://msdn.microsoft.com/data/jdbc의 SQL Server용 Microsoft JDBC Driver 6.0 페이지를 참조하십시오.
+
+
+------------
+설치
+------------
+install.txt에서 JDBC 드라이버 설치 방법을 볼 수 있습니다.  Windows 및 Unix 운영 체제에서
+ JDBC 드라이버를 설치하는 방법은 이 파일을 참조하십시오.
+
+
+---------------------------
+지원되는 운영 체제
+---------------------------
+SQL Server용 Microsoft JDBC Driver 6.0에 지원되는 운영 체제는 다음과 같습니다.
+  Windows Server 2008 SP2
+  Windows Server 2008 R2 SP1
+  Windows Server 2012
+  Windows Server 2012 R2
+  Windows Vista SP2
+  Windows 7 SP1
+  Windows 8
+  Windows 8.1
+  Windows 10
+  Linux
+  Unix
+
+위 목록은 지원되는 운영 체제 중 일부입니다. JDBC 드라이버는
+ JVM(Java Virtual Machine)의 사용을 지원하는 모든 운영 체제에서 작동하도록 설계되어 있지만 Oracle Solaris(x86), SUSE Linux 및
+ Windows Vista 서비스 팩 2 이상 운영 체제에서만 테스트가
+ 완료되었습니다.
+
+
+----------------
+릴리스 내용
+----------------
+SQL Server용 Microsoft JDBC Driver 6.0 실행 파일인 zip 또는 tar 파일은 지정된 위치에 다음 파일의
+ 압축을 풉니다. 여기에서 지정된 위치는 선택된 설치 디렉터리에 대한 상대적인 위치입니다.
+
+<installation directory>\sqljdbc_<version>\<language>\install.txt
+<installation directory>\sqljdbc_<version>\<language>\release.txt
+<installation directory>\sqljdbc_<version>\<language>\license.txt
+<installation directory>\sqljdbc_<version>\<language>\sqljdbc.jar
+<installation directory>\sqljdbc_<version>\<language>\sqljdbc4.jar
+<installation directory>\sqljdbc_<version>\<language>\sqljdbc41.jar
+<installation directory>\sqljdbc_<version>\<language>\sqljdbc42.jar
+<installation directory>\sqljdbc_<version>\<language>\auth\x86\sqljdbc_auth.dll
+<installation directory>\sqljdbc_<version>\<language>\auth\x64\sqljdbc_auth.dll
+<installation directory>\sqljdbc_<version>\<language>\samples\<sample files...>
+<installation directory>\sqljdbc_<version>\<language>\xa\xa_install.sql
+<installation directory>\sqljdbc_<version>\<language>\xa\x86\sqljdbc_xa.dll
+<installation directory>\sqljdbc_<version>\<language>\xa\x64\sqljdbc_xa.dll
+
+각 구성 요소에 대한 자세한 내용은 온라인 설명서
+ SQL Server용 Microsoft JDBC Driver 설명서: 
+https://msdn.microsoft.com/en-us/library/dn197850(v=sql.10).aspx를 참조하세요.
+
+설명서:
+-------------
+이 릴리스 정보, 설치 지침 및 사용 조건이 이 패키지에 포함되어 있습니다. 
+다른 모든 문서도 온라인에서 찾을 수 있습니다.
+
+오프라인 도움말 파일은 이제 제공되지 않습니다. 
+
+
+JAR 파일:
+---------
+이전 버전과의 호환성 및 가능한 업그레이드 시나리오를 지원하기 위해 JDBC Driver 6.0의 각 설치 패키지에는
+ sqljdbc.jar, sqljdbc4.jar, sqljdbc41.jar, sqljdbc42.jar이라는 네 개의 JAR 클래스 라이브러리가
+ 포함되어 있습니다.  
+
+중요한 참고: sqljdbc.jar 및 sqljdbc4.jar는 이전 버전과의 호환성을 위해서만 제공되며
+ 이 릴리스에 포함된 새로운 기능을 포함하지 않습니다.  sqljdbc41.jar 및 sqljdbc42.jar
+에만 새 기능이 포함되어 있습니다.
+
+
+기능별 파일:
+---------
+Azure Active Directory 및 통합 인증(Windows) 구성 요소는 auth 디렉터리에 포함되어 있습니다.
+
+JDBC 분산 트랜잭션 구성 요소는 xa 디렉터리에 포함되어 있습니다.
+
+
+예제:
+-------
+JDBC Driver의 다양한 기능을 보여 주는 샘플 응용 프로그램은 샘플
+ 디렉터리에 있습니다. 각 샘플 및 샘플 실행 방법에 대한 자세한 내용은 온라인
+ 설명서를 참조하세요.
+
+
+-----------
+변경 목록
+-----------
+4.2에서 6.0으로 변경:
+
+새로운 기능: 상시 암호화 응용 프로그램 개발자는 이제 SQL Server 2016 CTP(또는 이상) 이후로 제공된
+ 상시 암호화(AE) 기능을 사용할 수 있습니다. JDBC Driver는 SQL Server의 암호화된 데이터베이스 열에 저장된
+ 중요한 데이터를 투명하게 암호화하고 암호 해독하는 방식으로 상시 암호화 기능을 사용하게 해줍니다. 자세한 내용은
+ JDBC Driver의 상시 암호화 기능 사용 방법에 대한 MSDN 설명서를 참조하세요. 
+
+새로운 기능: 국제 도메인 이름 - JDBC Driver에서 이제 서버와 인스턴스 이름에
+ IDN(국제 도메인 이름)을 사용할 수 있습니다. 자세한 내용은 JDBC Driver에 IDN 사용 방법에 대한 MSDN 설명서를 참조하세요.
+
+새로운 기능: 테이블 반환 매개 변수 - 테이블 반환 매개 변수를 사용하면 데이터를 처리하는 데 여러 번 왕복하거나 서버 측 특수 논리를 설정하지 않고도
+ 데이터의 여러 행을 클라이언트 응용 프로그램에서 SQL Server로 쉽게 마샬링할 수 있습니다. 
+또한 테이블 반환 매개 변수를 사용하면 클라이언트 응용 프로그램에서 데이터 행을 캡슐화하고 매개 변수가 있는 단일 명령으로
+ 데이터를 서버에 보낼 수 있습니다. 자세한 내용은 테이블 반환 매개 변수에 대한 MSDN 설명서를 참조하세요.
+
+새로운 기능: AAD(Azure Active Directory) - AAD 인증은 AAD에서 ID를 참조하여 Azure SQL 데이터베이스 v12에 연결하는
+ 메커니즘입니다. 중앙에서 데이터베이스 사용자의 ID를 관리할 수 있는 AAD 인증은 SQL Server 인증 대신으로도
+ 사용할 수 있습니다. JDBC Driver 6.0을 사용하면 JDBC 연결 문자열에서 Azure SQL DB에 연결할
+ AAD 자격 증명을 지정할 수 있습니다. 자세한 내용은 JDBC Driver에 대한 연결 속성 설정에 대한 MSDN 설명서를 참조하세요.
+
+개선 기능: AlwaysOn 가용성 그룹(AG) - JDBC Driver에서는 이제 AlwaysOn 가용성 그룹에 투명하게
+ 연결됩니다. 또한 서버 인프라의 현재 AlwaysOn 토폴로지를 신속히 검색하여 
+현재 활성 서버에 투명하게 연결됩니다. 자세한 내용은 JDBC Driver의 연결 속성 설정에 대한
+ MSDN 설명서를 참조하세요.
+
+개선 기능: 이제 JDBC Driver에서 하위 쿼리 및/또는 조인과 같은 복합 쿼리용으로 준비된 문을 사용하여 매개 변수 메타데이터를
+ 검색할 수 있습니다. 이러한 향상 기능은 SQL Server 2012 및 최신 버전을 사용하는 경우에만 사용할 수 있습니다.
+
+
+------------
+알려진 문제점
+------------
+다음은 SQL Server용 Microsoft JDBC Driver 6.0에 대한 알려진 문제점입니다.
+
+1) SQL SERVER 2008 또는 2008 R2를 사용할 경우 매개 변수 메타데이터가 제한됨
+
+1.a) 매개 변수가 있는 MERGE 쿼리와 함께 사용될 경우
+ PreparedStatement.getParameterMetadata()에서 SQLException이 발생합니다.
+1.b) 준비된 문의 매개 변수 메타데이터는 하위 쿼리/조인이 들어 있는 쿼리와 함께 사용할 수 없습니다.
+
+
+2) JavaKerberos 및 IBM VM
+
+Windows 환경에서 실행할 경우 Java Kerberos가 작동할 수 있도록 구성 파일에
+ principalname을 지정해야 할 수 있습니다. 예를 들어 
+SQLJDBCDriver {
+  com.ibm.security.auth.module.Krb5LoginModule required
+  seDefaultCcache=true
+  credsType=initiator
+  principal=principalname@principaldomain;
+};
+
+
+3) SQL AZURE 연결 삭제
+
+SQL Azure에 연결할 때 비활성 기간 후 방화벽과 같은
+ 네트워크 구성 요소에서 유휴 연결을 종료할 수 있습니다. 네트워크 구성 요소에서 유휴 연결을 삭제하지 않도록 하려면
+ 드라이버가 로드된 운영 체제에서 다음 레지스트리 설정(또는 Windows가 아닌 경우 이에 해당하는 설정)을
+ 설정해야 합니다.
+           
+레지스트리 설정                                                                     권장 값
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\KeepAliveTime            30000
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\KeepAliveInterval         1000
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\TcpMaxDataRetransmission  10

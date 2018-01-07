@@ -1,0 +1,43 @@
+해야될일
+ * 인텔리제이에서 NEW 로 파일 중ㅇ 특정 템플릿불러오는방법을 모르겠음
+ * 마이바티스 설정을 xml 말고 어노테이션으로 , dbcp 사용으로 변경
+  
+  
+  
+  
+
+해결한일
+  *빠른 생산성을 위해서 재기동 없이 톰캣 Hot swapping 을 스프링부트처럼 할수있게
+    스프링로더 jar 파일을 아래링크에서다운(최신버전은알아서판단 )
+       http://mvnrepository.com/artifact/org.springframework/springloaded/1.2.4.RELEASE
+    인텔리제이의경우 톰캣설정에서 vm 옵션 에 
+     >>> -javaagent:C:/javaDev/Springloaded/springloaded-1.2.8.RELEASE.jar   -noverify  <<<< 이렇게추가하고
+      On Update action 과 On frame deactivation 을 -> update classes and resources 로 바꾸어준다.
+  
+
+  * 부트스트랩적용 하고 /상대경로 맞추어서 header,menu,footer 분리하기
+      <link rel="stylesheet" href="<c:url value="/resources/bootstrap-3.3.2/css/bootstrap.min.css" />" >
+      위와같이 jstl 사용하여 절대경로의 css 위치를 잡았다.
+  * mysql 연결 mybatis
+  * pom 파일 기존에 연습했던 spring 4.x 대로 바꾸자
+  * MVC 프로젝트 STS에서 생성후 인텔리J에서 추가모듈로 Import 및 톰캐세팅
+  * 한글처리 
+  * git 에 원격저장 -> git bash 에서 git init 등 커맨드로 일단 등록후 소스트리에서 하는게편함
+  * 인텔리제이에서 log4j 인식못하는부분 해결
+      - resource 폴더 프로젝트스트럭쳐 메뉴에서 resource 로선택
+      - log4j.xml 상단에 URI 부분에 커서를 놓고 alt + Enter - Manually Setup External Resource 선택
+        하면 현재 프로젝트에 포함된 라이브러리들 목록이 뜬다. log4j-1.2.8.jar 하위의 log4j.dtd
+         를 찾아서 지정해준다.
+  * 인텔리제이에서 mybatis mapper xml 인식못하는경우 pom.xml 의 build 태그안에 아래를 추가한다.
+   : 원인은 인텔리제이에서 빌드시 xml 을 인식못함
+    <resources>
+        <resource>
+          <directory>src/main/java</directory>
+          <includes>
+            <include>**/*.xml</include>
+          </includes>
+        </resource>
+      </resources>
+  * 쿼리로그를 이쁘게보기위해 log4j말고
+     log4jdbc-remix 를 사용 
+     http://addio3305.tistory.com/66

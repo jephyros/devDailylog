@@ -1,0 +1,30 @@
+톰캣버서 context.xml 에 아래설정추가
+
+<Resource name="jdbc/MSSQL" 
+    auth="Container"
+    type="javax.sql.DataSource" 
+    driverClassName="com.microsoft.sqlserver.jdbc.SQLServerDriver"
+    url="jdbc:sqlserver://localhost:1433;DataBaseName=CISDB"
+    username="sa" password="parts"
+    maxActive="20" maxWait="1000"/>
+	
+	
+	
+	
+---jsp에서 사용법
+
+		Connection connection;
+    	Statement statement;
+    	ResultSet resultSet;
+    	
+    	DataSource dataSource;
+		
+		
+		
+		
+		Context context = new InitialContext();
+		dataSource = (DataSource)context.lookup("java:comp/env/jdbc/MSSQL");
+		connection = dataSource.getConnection();
+		
+		statement = connection.createStatement();
+		resultSet = statement.executeQuery(query);

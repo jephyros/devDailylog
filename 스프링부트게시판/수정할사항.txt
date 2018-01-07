@@ -1,0 +1,13 @@
+ 최종수정일생성일 말고 사용자 자동으로 추가해보자
+    jpa의 
+        @MappedSuperclass
+        @EntityListeners(AuditingEntityListener.class)
+    기능을 활용해서
+1. 댓글달때 로그인안됬습니다. 메세지
+2. JPA트랜젝션
+3. 댓글달때 댓글카운트증가?
+4. jpa manytoone 성능?
+5. ajax 댓글달고 바로 삭제시 스크립트 안먹음
+
+swagger(http://localhost:8080/swagger-ui.html)
+포스트맨

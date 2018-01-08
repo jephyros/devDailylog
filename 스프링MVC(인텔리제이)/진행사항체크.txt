@@ -1,21 +1,14 @@
 
-면접준비
-  - AWS 에대해 언제부터 사용했는지 많이 사용하고있는지?
-  
 해야될일
-  * 로그인권한을 SPring Security 로 처리해보자
+  * 로그인권한을 SPring Security 로 처리해보자  
+  * 개인정보수정후 수정되었습니다라는 INfo 메세지?   
   
-  * 개인정보수정후 수정되었습니다라는 INfo 메세지? 
-  
-  * 마이바티스 관련사이트 http://www.mybatis.org/mybatis-3/ko/sqlmap-xml.html
-  
- 
   * 로그인 화면의 remember me 쿠키처리
-  * Repository 인터페이스만가지고 해보자 구현체없어도 마이바티스 인식하는데 트랜젝션도 체크해보다
+  * 마이바티스 트랜젝션체크 Repository인터페이스만가지고 해보자.
   
   * Result 클래스 별도로 빼서 권한체크스 에러메세지 반환하도록
  
-  * 마이바티스의 퀄리 xml 을 xml로 하지말고해보자
+  * 마이바티스의 쿼리 xml 을 xml로 하지말고해보자
  
   * 마이바티스 설정을 xml 말고 어노테이션으로 , dbcp 사용으로 변경3
   
@@ -24,13 +17,14 @@
   
 
 해결한일
-* 인텔리제이에서 NEW 로 파일 중 특정 템플릿불러오는방법 ->java클래스선택하고 이름입력하고 아래 선택하면되느것을 ㅡ,.ㅡ
-* 내정보수정화면구성 마이바티스의 동적쿼리로  <set> 구문사용하여 동적쿼리구성하여 업데이트문구성
- * Repository 인터페이스만가지고 해보자 구현체없어도 마이바티스 인식하는지 체크 -> 이렇게 많이사용한다고한다.
-   :  최종 Repository (DAO)에서는 인터페이스만구현하고 Service단에서 SqlSession 을 호출하여 처리
- * 로그인실패시 로그인화면으로 전환( 페이지내에 실패 이유표기)
- * 로그인처리 , 화면 메뉴권한 처리완료
- * 빠른 생산성을 위해서 재기동 없이 톰캣 Hot swapping 을 스프링부트처럼 할수있게
+  * 마이바티스 관련사이트 http://www.mybatis.org/mybatis-3/ko/sqlmap-xml.html
+  * 인텔리제이에서 NEW 로 파일 중 특정 템플릿불러오는방법 ->java클래스선택하고 이름입력하고 아래 선택하면되느것을 ㅡ,.ㅡ
+  * 내정보수정화면구성 마이바티스의 동적쿼리로  <set> 구문사용하여 동적쿼리구성하여 업데이트문구성
+  * Repository 인터페이스만가지고 해보자 구현체없어도 마이바티스 인식하는지 체크 -> 이렇게 많이사용한다고한다.
+     :  최종 Repository (DAO)에서는 인터페이스만구현하고 Service단에서 SqlSession 을 호출하여 처리
+  * 로그인실패시 로그인화면으로 전환( 페이지내에 실패 이유표기)
+  * 로그인처리 , 화면 메뉴권한 처리완료
+  * 빠른 생산성을 위해서 재기동 없이 톰캣 Hot swapping 을 스프링부트처럼 할수있게
     스프링로더 jar 파일을 아래링크에서다운(최신버전은알아서판단 )
        http://mvnrepository.com/artifact/org.springframework/springloaded/1.2.4.RELEASE
     인텔리제이의경우 톰캣설정에서 vm 옵션 에 
@@ -38,7 +32,7 @@
       On Update action 과 On frame deactivation 을 -> update classes and resources 로 바꾸어준다.
   
 
- * 부트스트랩적용 하고 /상대경로 맞추어서 header,menu,footer 분리하기
+  * 부트스트랩적용 하고 /상대경로 맞추어서 header,menu,footer 분리하기
       <link rel="stylesheet" href="<c:url value="/resources/bootstrap-3.3.2/css/bootstrap.min.css" />" >
       위와같이 jstl 사용하여 절대경로의 css 위치를 잡았다.
   * mysql 연결 mybatis

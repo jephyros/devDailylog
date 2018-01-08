@@ -1,0 +1,11 @@
+*마이바티스
+    >>  resultMap을 왜사용할까? 단순히 자바객체와의 이름을 맞추려고?
+    >> 매퍼 xml 에서  아래처럼
+       <collection property="createUserName" column="createuserId" javaType="String"  select="getCommentListById"/>
+       서브쿼리처럼 사요할수있다.
+       그냥 inner join 이 성능상 훨씬 빠를것같은데 왜 이런것을 넣었을까? 쿼리짜기 편하라고?
+
+*스프링
+    * PutMapping (update용) 스프링MVC에서 안됨 -> 스프링부트에서만 되는건가?   아니면 다른설정이필요한가?    
+
+

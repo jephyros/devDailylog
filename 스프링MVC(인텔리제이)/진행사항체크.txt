@@ -20,6 +20,8 @@
   
 
 해결한일
+  * 인텔리제이에서 스프링부트 jsp 설정완료 터미널에서 mvnw spring-boot:run 으로 직적실행하면 작동을한다. 
+     Run/Debuger 설정(실행버튼의 톰캣설정같은것) 에서 Run maven 에 spring-boot:run 을 하며됨
   * 마이바티스 관련사이트 http://www.mybatis.org/mybatis-3/ko/sqlmap-xml.html
   * 인텔리제이에서 NEW 로 파일 중 특정 템플릿불러오는방법 ->java클래스선택하고 이름입력하고 아래 선택하면되느것을 ㅡ,.ㅡ
   * 내정보수정화면구성 마이바티스의 동적쿼리로  <set> 구문사용하여 동적쿼리구성하여 업데이트문구성

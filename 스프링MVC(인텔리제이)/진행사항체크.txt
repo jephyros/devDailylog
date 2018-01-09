@@ -2,10 +2,11 @@
  * JPA에서 복잡한쿼리처리방식(조인이 많은경우) -> 성능상문제?
 
 해야될일
- * heidisql >> mysql 쿼리분석기 
+ 
 
-  * 로그인권한을 SPring Security 로 처리해보자  
+  * 로그인권한을 SPring Security 로 처리해보자  별도로그인화면 만들어서
   * 비밀번호 암호화까지 
+  
   * 개인정보수정후 수정되었습니다라는 INfo 메세지?   
   
   * 로그인 화면의 remember me 쿠키처리
@@ -22,6 +23,8 @@
   
 
 해결한일
+  * 로그인권한을 SPring Security 로 처리해보자  테스트완료 
+  * heidisql >> mysql 쿼리분석기  쓸만하네
   * 인텔리제이에서 스프링부트 jsp 설정완료 터미널에서 mvnw spring-boot:run 으로 직적실행하면 작동을한다. 
      Run/Debuger 설정(실행버튼의 톰캣설정같은것) 에서 Run maven 에 spring-boot:run 을 하며됨
      이것고다는 터미널에서 직접실행하는게 더 좋음

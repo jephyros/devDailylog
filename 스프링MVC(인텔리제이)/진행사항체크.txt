@@ -1,4 +1,8 @@
 향후공부할것 
+
+  DBA 가 되기위한 방법을 알아볼까 
+       : Amazon Redshift / PostgreSQL
+
  * linux 환경 서버 이중화? 안성성? 백업 등? mysql 등 안정화,이중화
    -> 
    (http://blog.cafe24.com/1285)

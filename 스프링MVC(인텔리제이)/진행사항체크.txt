@@ -1,4 +1,6 @@
 향후공부할것 
+  UML (자바 클래스 다이어그램 표현방식) 을 현업에서는 많이 사용하는가?
+
 
   DBA 가 되기위한 방법을 알아볼까 
        : Amazon Redshift / PostgreSQL
